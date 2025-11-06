@@ -1,149 +1,260 @@
 <!doctype html>
 <html lang="vi">
 <head>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8347855396412381"
-     crossorigin="anonymous"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Website đang bảo trì — Sớm trở lại</title>
+  <style>
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --accent:#ff6b6b;
+      --muted:#9aa4b2;
+      --glass: rgba(255,255,255,0.03);
+      font-synthesis: none;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: Inter, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background:
+        radial-gradient(1200px 700px at 10% 20%, rgba(255,107,107,0.07), transparent 8%),
+        radial-gradient(900px 500px at 90% 80%, rgba(79,70,229,0.05), transparent 8%),
+        var(--bg);
+      color:#e6eef6;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:28px;
+    }
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Tạo khung skin Liên Quân</title>
-  <link rel="stylesheet" href="assets/css/reset.css">
-  <link rel="stylesheet" href="assets/css/appbar.css">
-  <link rel="stylesheet" href="assets/css/footer.css">
-  <link rel="stylesheet" href="assets/css/profile.css">
-  <link rel="stylesheet" href="assets/css/background.css">
-  <link rel="stylesheet" href="assets/css/custom.css">
-  <link rel="stylesheet" href="assets/css/styles.css">
-  <link rel="stylesheet" href="assets/css/gallery.css">
+    .card{
+      width:100%;
+      max-width:980px;
+      background:linear-gradient(180deg,var(--card), rgba(255,255,255,0.02));
+      border-radius:14px;
+      padding:36px;
+      box-shadow: 0 8px 30px rgba(2,6,23,0.6), inset 0 1px 0 rgba(255,255,255,0.02);
+      display:grid;
+      grid-template-columns: 320px 1fr;
+      gap:28px;
+      align-items:center;
+    }
+
+    .logo-block{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      text-align:center;
+    }
+    .penguin{
+      font-size:72px;
+      line-height:1;
+      margin-bottom:8px;
+    }
+    h1{
+      margin:0 0 8px 0;
+      font-size:24px;
+      letter-spacing: -0.3px;
+    }
+    p.lead{
+      margin:0;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .info{
+      padding:18px;
+      background:var(--glass);
+      border-radius:10px;
+      margin-top:18px;
+      width:100%;
+    }
+    .info b{display:block;margin-bottom:6px}
+
+    .right{
+      display:flex;
+      flex-direction:column;
+      gap:18px;
+    }
+
+    .countdown{
+      display:flex;
+      gap:10px;
+      align-items:center;
+      font-weight:600;
+    }
+    .time-box{
+      background:rgba(255,255,255,0.03);
+      padding:12px 14px;
+      border-radius:8px;
+      min-width:64px;
+      text-align:center;
+    }
+    .controls{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      align-items:center;
+    }
+    .btn{
+      appearance:none;
+      border:0;
+      padding:10px 14px;
+      border-radius:10px;
+      cursor:pointer;
+      font-weight:600;
+      background:linear-gradient(90deg,var(--accent), #ff884d);
+      color:#0b1220;
+    }
+    .btn.secondary{
+      background:transparent;
+      color:var(--muted);
+      border:1px solid rgba(255,255,255,0.04);
+    }
+
+    form.subscribe{
+      display:flex;
+      gap:10px;
+      align-items:center;
+      margin-top:6px;
+    }
+    .subscribe input[type="email"]{
+      flex:1;
+      padding:10px 12px;
+      border-radius:10px;
+      border:1px solid rgba(255,255,255,0.03);
+      background:transparent;
+      color:inherit;
+      outline:none;
+    }
+    .small{
+      font-size:13px;color:var(--muted)
+    }
+
+    footer.note{
+      margin-top:8px;
+      color:var(--muted);
+      font-size:13px;
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+    }
+
+    @media (max-width:840px){
+      .card{grid-template-columns: 1fr; padding:22px}
+      .logo-block{order:2}
+      .right{order:1}
+    }
+  </style>
 </head>
-
 <body>
-  <!-- 🌀 Loader -->
-    <div class="loader-container">
-      <div class="loader"> 
-        <div class="loader--dot"></div>
-        <div class="loader--dot"></div>
-        <div class="loader--dot"></div>
-        <div class="loader--dot"></div>
-        <div class="loader--dot"></div>
-        <div class="loader--dot"></div>
-        <div class="loader--text">Loading...</div>
+  <main class="card" role="status" aria-live="polite">
+    <div class="logo-block" aria-hidden="false">
+      <div class="penguin" title="chú chim cánh cụt">🐧</div>
+      <h1>Website đang được bảo trì</h1>
+      <p class="lead">Chúng tôi đang cập nhật một vài tính năng. Xin lỗi vì sự bất tiện — chúng tôi sẽ quay lại sớm.</p>
+
+      <div class="info" aria-hidden="false">
+        <b>Thời gian dự kiến</b>
+        <div class="small">Dự kiến hoàn tất: <span id="targetDateText">--</span></div>
+        <div style="margin-top:8px" class="small">Nếu cần liên hệ: <a href="mailto:admin@yourdomain.com" style="color:inherit">admin@yourdomain.com</a></div>
       </div>
     </div>
-    <script src="assets/js/custom.js"></script>
-  <!-- 🌀 End Loader -->
-<header>
-    <nav class="app-bar">
-      <a href="/" class="active">Trang Chủ</a>
-      <a href="gallery.html">Code AM</a>
-      <!-- Hamburger menu -->
-    <div class="hamburger" id="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
+
+    <div class="right" role="region" aria-label="Chi tiết bảo trì">
+      <div>
+        <div class="small">Đang làm việc để cải thiện trải nghiệm — cảm ơn bạn đã kiên nhẫn.</div>
+      </div>
+
+      <!-- Countdown (có thể tắt bằng cách ẩn #countdownWrap) -->
+      <div id="countdownWrap">
+        <div class="small" style="margin-bottom:8px">Thời gian còn lại:</div>
+        <div class="countdown" aria-live="polite">
+          <div class="time-box"><div id="days">--</div><div style="font-size:11px;color:var(--muted)">Ngày</div></div>
+          <div class="time-box"><div id="hours">--</div><div style="font-size:11px;color:var(--muted)">Giờ</div></div>
+          <div class="time-box"><div id="minutes">--</div><div style="font-size:11px;color:var(--muted)">Phút</div></div>
+          <div class="time-box"><div id="seconds">--</div><div style="font-size:11px;color:var(--muted)">Giây</div></div>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button class="btn" id="refreshBtn" onclick="location.reload()">Kiểm tra lại</button>
+        <button class="btn secondary" id="homeBtn" onclick="window.location.href='/'">Về trang chủ</button>
+      </div>
+
+      <div style="margin-top:6px">
+        <div class="small">Nhận thông báo khi hoàn tất:</div>
+        <form class="subscribe" onsubmit="subscribe(event)">
+          <input id="emailInput" type="email" placeholder="Nhập email của bạn" required />
+          <button class="btn secondary" type="submit">Thông báo</button>
+        </form>
+        <div id="subMsg" class="small" style="margin-top:8px;color:var(--muted)"></div>
+      </div>
+
+      <footer class="note">
+        <div>© <span id="year"></span> YourSite</div>
+        <div class="small">Cần hỗ trợ? <a href="mailto:support@yourdomain.com" style="color:inherit">support@yourdomain.com</a></div>
+      </footer>
     </div>
-    </nav>
-    <!-- Popup thông tin liên hệ -->
-  <div id="contactPopupContainer"></div>
-  </header>
-  <script src="assets/js/profile.js"></script>
-  <div class="search-box">
-  <img src="assets/logo-images/logo52hzmisfit.png" alt="logo" class="logo-pulse" />
-  </div>
-<p style="color:#ffffff;">
-  <h3>Code Ghép Ảnh ở trang "Code AM" ý</h3><br>
-    - Chào bạn nha. mình biết bạn gặp khó khăn trong việc fake khung Liqi<br>
-    - Nên mình đã tạo ra web này nè hihihi<br>
-    - Cứ dùng thoải mái làm gì cũng được nhóa hẹ he hẹ<br>
-    - cre: 52HzMisfit (không cre cũng chẳng sao đâu thoải mái đi hehehee:)))) <br>
-    <h3 class="rainbow-text">Lưu ý: Tớ thích cậu nên là cậu đồng ý đy 😾</h3>
-    <br>
- <div class="container">
-  <h1 style="color: #FFFFFF">Tạo khung skin Liên Quân</h1><br>
+  </main>
 
-  <div class="controls">
-    <label>Chọn Tướng:
-      <select id="tuongSelect"></select>
-    </label>
+  <script>
+    // === CÁCH DÙNG: chỉnh biến targetDate thành thời điểm dự kiến hoàn tất (YYYY, M-1, D, H, m, s)
+    // Nếu bạn không muốn hiển thị countdown, ẩn phần #countdownWrap hoặc bỏ nội dung updateCountdown.
+    const targetDate = new Date(); // mặc định là 24 giờ sau khi mở trang
+    targetDate.setHours(targetDate.getHours() + 24);
 
-    <label>Chọn Skin:
-      <select id="skinSelect"></select>
-    </label>
+    // Example: để đặt ngày cố định, dùng:
+    // const targetDate = new Date(2025, 10, 10, 15, 0, 0); // Lưu ý: tháng bắt đầu từ 0 (0=Jan, 10=Nov)
 
-    <label>Chọn Khung:
-      <select id="khungSelect"></select>
-    </label>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('targetDateText').textContent = targetDate.toLocaleString('vi-VN');
 
-    <label>Chọn Phép bổ trợ:
-      <select id="phepSelect"></select>
-    </label>
+    function updateCountdown(){
+      const now = new Date();
+      const diff = targetDate - now;
+      if(diff <= 0){
+        document.getElementById('days').textContent = '0';
+        document.getElementById('hours').textContent = '00';
+        document.getElementById('minutes').textContent = '00';
+        document.getElementById('seconds').textContent = '00';
+        // Khi hoàn tất, bạn có thể tự động chuyển hướng hoặc hiển thị nút
+        return;
+      }
+      const s = Math.floor(diff/1000);
+      const days = Math.floor(s / 86400);
+      const hours = Math.floor((s % 86400) / 3600);
+      const minutes = Math.floor((s % 3600) / 60);
+      const seconds = s % 60;
 
-    <label>Chọn Thông thạo:
-      <select id="thongthaoSelect"></select>
-    </label>
+      document.getElementById('days').textContent = days;
+      document.getElementById('hours').textContent = String(hours).padStart(2,'0');
+      document.getElementById('minutes').textContent = String(minutes).padStart(2,'0');
+      document.getElementById('seconds').textContent = String(seconds).padStart(2,'0');
+    }
+    updateCountdown();
+    setInterval(updateCountdown,1000);
 
-    <label>Chọn Tri kỉ:
-      <select id="trikiSelect"></select>
-    </label>
-
-    <label>Chọn phù hiệu chính:
-  <select id="phuhieuGroupSelect">
-    <option value="khong">Không</option>
-    <option value="luc">Phù hiệu Lục</option>
-    <option value="vang">Phù hiệu Vàng</option>
-    <option value="do">Phù hiệu Đỏ</option>
-    <option value="lam">Phù hiệu Lam</option>
-  </select>
-</label>
-
-<label id="phuhieuLabel" style="display: none;">Chọn phù hiệu:
-  <select id="phuhieuSelect"></select>
-</label>
-
-    <div class="switch-label">
-  <span>Viền tên vàng</span>
-
-  <!-- <-- dùng label cho switch để click vào slider sẽ toggle checkbox -->
-  <label class="switch">
-    <input type="checkbox" id="vienvangCheck">
-    <span class="slider"></span>
-  </label>
-</div>
-
-    <label>Nếu dán tên kí tự thì hãy gõ một chữ rồi dán nha <br>
-      Nhập tên game của bạn:
-      <input type="text" id="tenGameInput" placeholder="Nhập tên game...">
-    </label>
-
-    <h4 style="color:#ffcc00;">Bấm tạo ảnh chờ 2 đến 5s tùy máy. Giữ 2s để lưu hình cho nhanh!</h4>
-
-    <!-- Nút tạo ảnh -->
-    <button id="createBtn">✨ Tạo ảnh</button>
-
-    <!-- Canvas đặt ngay dưới các nút -->
-    <canvas id="preview" width="900" height="1200" style="display:none;"></canvas>
-
-    <!-- Nút lưu ảnh, ẩn trước -->
-    <button id="saveBtn" style="display:none;">💾 Lưu hình</button>
-  </div>
-</div>
-<script src="assets/js/app.js"></script>
-<!-- 🐧 Footer -->
-<footer class="site-footer">
-  <div class="footer-container">
-    <!-- Cột trái: Lưu ý -->
-    <div class="footer-left">
-      <h3>Lưu ý nhỏ 🐧</h3>
-      <p>Mở web bằng trình duyệt bên ngoài để lưu ảnh. Hoặc bấm giữ 2s để lưu ảnh, trên pc thì click chuột phải rồi chọn lưu ảnh. Web này chỉ tham khảo để ghép khung Liên Quân.</p>
-    </div>
-
-    <!-- Cột phải: Thông tin liên hệ -->
-    <div class="footer-right">
-      <h3>Nguồn</h3>
-      <a href="https://lienquan.garena.vn" target="_blank">Garena Liên Quân Mobile</a>
-    </div>
-  </div>
-</footer>
-<!-- 🐧 End Footer -->
+    // Simple "subscribe" demo (lưu localStorage) - thay bằng API gửi email thực tế nếu cần
+    function subscribe(e){
+      e.preventDefault();
+      const email = document.getElementById('emailInput').value.trim();
+      if(!email) return;
+      // Lưu tạm (demo)
+      try{
+        const list = JSON.parse(localStorage.getItem('maintenance_subs')||'[]');
+        if(!list.includes(email)) list.push(email);
+        localStorage.setItem('maintenance_subs', JSON.stringify(list));
+        document.getElementById('subMsg').textContent = 'Cảm ơn! Chúng tôi sẽ thông báo qua email khi hoàn tất.';
+        document.getElementById('emailInput').value = '';
+      }catch(err){
+        document.getElementById('subMsg').textContent = 'Lỗi. Vui lòng thử lại sau.';
+      }
+    }
+  </script>
 </body>
 </html>
